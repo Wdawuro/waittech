@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog — W.A.I.T Tech Insights</title>
+  <meta name="description" content="W.A.I.T Tech blog — articles about AI, cybersecurity, cloud, and innovation." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body class="theme-dark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">W.A.I.T Tech</a>
+      <nav id="main-nav" class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html" aria-current="page">Blog</a>
+        <a href="contact.html" class="btn-outline">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="search-toggle" aria-label="Search" class="icon-btn">🔍</button>
+        <button id="theme-toggle" aria-label="Toggle dark mode" class="icon-btn">🌗</button>
+        <button id="mobile-menu-toggle" class="icon-btn mobile-only" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container">
+      <h1>Insights & News</h1>
+      <p class="muted">Articles on AI, security, cloud, and product innovation from the W.A.I.T Tech team.</p>
+
+      <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-top:1rem">
+        <div style="flex:1;min-width:260px">
+          <input id="blog-search" type="search" placeholder="Search articles..." style="width:100%;padding:0.6rem;border-radius:8px;border:none;background:rgba(255,255,255,0.02);color:var(--white)">
+        </div>
+        <div>
+          <select id="blog-category">
+            <option value="all">All categories</option>
+            <option value="ai">AI</option>
+            <option value="security">Security</option>
+            <option value="cloud">Cloud</option>
+            <option value="case-study">Case Study</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="posts-grid" class="cards-grid" style="margin-top:1rem">
+        <article class="card post" data-category="ai">
+          <h3><a href="blog/ai-future-of-work.html">Integrating AI into Everyday Workflows</a></h3>
+          <p class="muted">How to architect AI features that enhance, not replace, human decision-making.</p>
+          <p class="muted" style="font-size:0.9rem">Mar 2, 2026 — AI</p>
+        </article>
+
+        <article class="card post" data-category="security">
+          <h3><a href="blog/hardening-ml-systems.html">Hardening Machine Learning Systems for Production</a></h3>
+          <p class="muted">Security practices specific to ML pipelines and model deployment.</p>
+          <p class="muted" style="font-size:0.9rem">Feb 10, 2026 — Security</p>
+        </article>
+
+        <article class="card post" data-category="case-study">
+          <h3><a href="blog/retail-case-study.html">Case Study: Retail Personalization at Scale</a></h3>
+          <p class="muted">A technical dive into architecture, data, and A/B results.</p>
+          <p class="muted" style="font-size:0.9rem">Jan 14, 2026 — Case Study</p>
+        </article>
+
+        <article class="card post" data-category="cloud">
+          <h3><a href="blog/cloud-cost-optimization.html">Cloud Cost Optimization for ML Workloads</a></h3>
+          <p class="muted">Strategies to balance performance and cost for large-scale training and inference.</p>
+          <p class="muted" style="font-size:0.9rem">Dec 21, 2025 — Cloud</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">W.A.I.T Tech</a>
+        <p class="muted">Worldwide AI Integration Technology — helping organizations adopt AI responsibly.</p>
+      </div>
+      <nav class="footer-links">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div>
+        <p>Contact</p>
+        <p class="muted">email@waittech.example | +2637808816 </p>
+        <p class="muted">© W.A.I.T Tech - Worldwide AI Integration Technology. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Client-side blog search + category filter
+    document.addEventListener('DOMContentLoaded', () => {
+      const posts = Array.from(document.querySelectorAll('.post'));
+      const search = document.getElementById('blog-search');
+      const cat = document.getElementById('blog-category');
+
+      function applyFilters() {
+        const q = (search?.value || '').toLowerCase().trim();
+        const c = cat?.value || 'all';
+        posts.forEach(p => {
+          const title = (p.textContent || '').toLowerCase();
+          const category = p.getAttribute('data-category') || '';
+          const matchesQuery = q === '' || title.includes(q);
+          const matchesCat = c === 'all' || category === c;
+          p.style.display = (matchesQuery && matchesCat) ? '' : 'none';
+        });
+      }
+
+      search?.addEventListener('input', applyFilters);
+      cat?.addEventListener('change', applyFilters);
+    });
+  </script>
+</body>
+</html> 

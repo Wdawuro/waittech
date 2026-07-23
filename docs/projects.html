@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — W.A.I.T Tech Portfolio</title>
+  <meta name="description" content="W.A.I.T Tech project portfolio and case studies showcasing AI, automation, and software solutions." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body class="theme-dark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">W.A.I.T Tech</a>
+      <nav id="main-nav" class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="btn-outline">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="search-toggle" aria-label="Search" class="icon-btn">🔍</button>
+        <button id="theme-toggle" aria-label="Toggle dark mode" class="icon-btn">🌗</button>
+        <button id="mobile-menu-toggle" class="icon-btn mobile-only" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container">
+      <h1>Selected Projects & Case Studies</h1>
+      <p class="muted">A selection of recent work demonstrating measurable outcomes.</p>
+
+      <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-top:1rem">
+        <div>
+          <label class="muted" for="project-filter">Filter by technology:</label>
+          <select id="project-filter" aria-controls="projects-grid">
+            <option value="all">All</option>
+            <option value="ai">AI</option>
+            <option value="web">Web</option>
+            <option value="mobile">Mobile</option>
+            <option value="cloud">Cloud</option>
+            <option value="security">Security</option>
+          </select>
+        </div>
+        <div style="margin-left:auto">
+          <a class="btn-outline" href="contact.html">Start a similar project</a>
+        </div>
+      </div>
+
+      <div id="projects-grid" class="cards-grid" style="margin-top:1rem">
+        <!-- Project 1 -->
+        <article class="card project-card" data-tags="ai,cloud">
+          <img src="assets/images/project-1.png" alt="SmartAutomation dashboard screenshot" style="width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:0.75rem">
+          <h3>SmartAutomation Platform</h3>
+          <p class="muted">A cloud-native automation platform that reduced manual processing time by 60% using ML-driven routing and monitoring.</p>
+          <p class="muted"><strong>Tech:</strong> Python, Kubernetes, TensorFlow, Kafka</p>
+          <a class="read-more" href="projects/smartautomation.html">View case study →</a>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="card project-card" data-tags="ai,web">
+          <img src="assets/images/project-2.jpg" alt="Retail personalization screenshot" style="width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:0.75rem">
+          <h3>Retail Personalization Engine</h3>
+          <p class="muted">Real-time recommendations that increased conversion rate by 18% for a major retailer.</p>
+          <p class="muted"><strong>Tech:</strong> Spark, Redis, REST APIs</p>
+          <a class="read-more" href="projects/retail-personalization.html">View case study →</a>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="card project-card" data-tags="mobile,ai">
+          <img src="assets/images/project-3.jpg" alt="Healthcare mobile app screenshot" style="width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:0.75rem">
+          <h3>Remote Health Companion App</h3>
+          <p class="muted">A secure mobile app with on-device ML for symptom triage and patient monitoring.</p>
+          <p class="muted"><strong>Tech:</strong> Flutter, TensorFlow Lite, HIPAA-ready security</p>
+          <a class="read-more" href="projects/health-companion.html">View case study →</a>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="card project-card" data-tags="security,cloud">
+          <img src="assets/images/project-4.jpg" alt="Security operations center screenshot" style="width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:0.75rem">
+          <h3>Security Operations & Monitoring</h3>
+          <p class="muted">Comprehensive SOC design and automation that reduced incident response times by 40%.</p>
+          <p class="muted"><strong>Tech:</strong> SIEM, Elastic, Automation playbooks</p>
+          <a class="read-more" href="projects/security-ops.html">View case study →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container alt">
+      <h2>Project engagement & outcomes</h2>
+      <p class="muted">We focus on measurable KPIs: cost savings, time saved, revenue uplift, model performance, and security posture improvements.</p>
+      <div style="margin-top:1rem" class="cards-grid">
+        <div class="card"><strong>Average deployment time:</strong> 8–12 weeks for MVP</div>
+        <div class="card"><strong>Median ROI timeframe:</strong> 3–9 months</div>
+        <div class="card"><strong>Support:</strong> 24/7 SRE & managed services available</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">W.A.I.T Tech</a>
+        <p class="muted">Worldwide AI Integration Technology — helping organizations adopt AI responsibly.</p>
+      </div>
+      <nav class="footer-links">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div>
+        <p>Contact</p>
+        <p class="muted">email@waittech.com | +263 783808816</p>
+        <p class="muted">© W.A.I.T Tech - Worldwide AI Integration Technology. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple client-side filter for projects
+    document.addEventListener('DOMContentLoaded', () => {
+      const filter = document.getElementById('project-filter');
+      const cards = Array.from(document.querySelectorAll('.project-card'));
+      filter?.addEventListener('change', (e) => {
+        const v = e.target.value;
+        cards.forEach(c => {
+          if(v === 'all') { c.style.display = ''; return; }
+          const tags = c.getAttribute('data-tags') || '';
+          c.style.display = tags.split(',').includes(v) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

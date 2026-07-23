@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — W.A.I.T Tech</title>
+  <meta name="description" content="Contact W.A.I.T Tech — request a consultation, sales, careers, or press inquiries." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body class="theme-dark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">W.A.I.T Tech</a>
+      <nav id="main-nav" class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" aria-current="page" class="btn-outline">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="search-toggle" aria-label="Search" class="icon-btn">🔍</button>
+        <button id="theme-toggle" aria-label="Toggle dark mode" class="icon-btn">🌗</button>
+        <button id="mobile-menu-toggle" class="icon-btn mobile-only" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container">
+      <h1>Contact Us</h1>
+      <p class="muted">Reach out for consultations, partnerships, careers, or press. We'll respond within 2 business days.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 380px;gap:1rem;margin-top:1rem;align-items:start">
+        <div>
+          <form id="contact-form" class="card" style="display:flex;flex-direction:column;gap:0.75rem">
+            <label for="c-name">Name</label>
+            <input id="c-name" name="name" required placeholder="Your full name" style="padding:0.6rem;border-radius:8px;border:none;background:var(--glass);color:var(--white)">
+
+            <label for="c-email">Email</label>
+            <input id="c-email" name="email" type="email" required placeholder="you@company.com" style="padding:0.6rem;border-radius:8px;border:none;background:var(--glass);color:var(--white)">
+
+            <label for="c-company">Company</label>
+            <input id="c-company" name="company" placeholder="Company name (optional)" style="padding:0.6rem;border-radius:8px;border:none;background:var(--glass);color:var(--white)">
+
+            <label for="c-phone">Phone</label>
+            <input id="c-phone" name="phone" placeholder="+ 263******** (optional)" style="padding:0.6rem;border-radius:8px;border:none;background:var(--glass);color:var(--white)">
+
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" rows="6" required placeholder="Tell us about your project or inquiry" style="padding:0.6rem;border-radius:8px;border:none;background:var(--glass);color:var(--white)"></textarea>
+
+            <div style="display:flex;gap:0.5rem;align-items:center">
+              <button class="btn-primary" type="submit">Send Message</button>
+              <a class="btn-outline" href="mailto:wdawuro@gmail.com">Email Us</a>
+            </div>
+
+            <p class="muted" style="font-size:0.9rem;margin-top:0.25rem">We respect your privacy. By contacting us you agree to our privacy policy (link placeholder).</p>
+          </form>
+        </div>
+
+        <aside>
+          <div class="card" style="padding:1rem">
+            <h3>Contact Details</h3>
+            <p class="muted" style="margin-top:0.5rem">
+              Email: <a href="mailto:wadawuro@gmsil.com">email@waittech.com</a><br>
+              Phone: +263 783808816<br>
+              Address: Harare , Zimbabwe
+            </p>
+            <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:1rem 0">
+            <h4>Social</h4>
+            <p class="muted"><a href="#" aria-label="Twitter">Twitter</a> • <a href="#" aria-label="LinkedIn">LinkedIn</a> • <a href="#" aria-label="GitHub">GitHub</a></p>
+          </div>
+
+          <div class="card" style="margin-top:1rem;padding:0.5rem;overflow:hidden">
+            <iframe
+              title="W.A.I.T Tech location"
+              src="https://www.google.com/maps?q=Placeholder+City+Address&output=embed"
+              width="100%" height="220" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">W.A.I.T Tech</a>
+        <p class="muted">Worldwide AI Integration Technology — helping organizations adopt AI responsibly.</p>
+      </div>
+      <nav class="footer-links">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div>
+        <p>Contact</p>
+        <p class="muted">waittech@gmail.com | +263 783808816</p>
+        <p class="muted">© W.A.I.T Tech - Worldwide AI Integration Technology. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple contact form placeholder handler (replace with backend integration)
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('contact-form');
+      form?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('c-name').value.trim();
+        const email = document.getElementById('c-email').value.trim();
+        const message = document.getElementById('c-message').value.trim();
+        if(!name || !email || !message) { alert('Please fill in name, email, and message.'); return; }
+        // TODO: POST to your server or 3rd-party form provider here.
+        alert('Thanks, ' + (name.split(' ')[0] || '') + '! Your message has been received. We will contact you shortly.');
+        form.reset();
+      });
+    });
+  </script>
+</body>
+</html>
