@@ -1,0 +1,7 @@
+# robots.txt for W.A.I.T Tech
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://wdawuro.github.io/waittech/sitemap.xml
